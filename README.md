@@ -19,7 +19,7 @@ Antes de comenzar, asegurarse de tener instalado lo siguiente:
 PASO 1: CLONAR EL REPOSITORIO
 ------------------------------
 
-    git clone <url-del-repositorio>
+    git clone https://github.com/NicolasLinares2006/CCLInventory.git
     cd CCLInventory
 
 
