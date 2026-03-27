@@ -72,6 +72,19 @@ Abrir una nueva terminal e ingresar al directorio del frontend:
 
     cd ccl-inventory-frontend
 
+Nota Importante sobre la API:
+Antes de iniciar, asegúrese de que la URL de conexión coincida con el puerto de su servidor Backend. Si su API de .NET se ejecuta en un puerto distinto al configurado por defecto (5000), debe ajustar el archivo de entorno:
+
+Diríjase a: src/environments/environment.ts y src/environments/environment.development.ts
+
+Modifique la propiedad apiUrl según corresponda:
+
+TypeScript
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:5000/api' // Ajustar puerto si es diferente a 5000
+}
+
 Instalar las dependencias:
 
     npm install
