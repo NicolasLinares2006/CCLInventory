@@ -1,0 +1,190 @@
+# Dependencias
+node_modules/
+packages/
+*.npm
+*.npmignore
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Angular
+dist/
+tmp/
+out-tsc/
+*.css.map
+*.js.map
+*.js
+*.d.ts
+.angular/
+
+# .NET
+**/bin/
+**/obj/
+**/out/
+*.user
+*.userosscache
+*.vs
+*.vscode
+*.suo
+*.userprefs
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Visual Studio
+.vs/
+.vscode/
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.vcxproj.user
+*.vspx
+*.ncrunchproject
+*.ncrunchsolution
+*.opensdf
+*.sdf
+*.cachefile
+*.crunchsolution.*
+*.crunchproject.*
+Project.lock.json
+project.lock.json
+project.assets.json
+
+# Entity Framework
+/Migrations/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# PostgreSQL
+*.sql
+*.backup
+*.dump
+pg_log/
+pg_stat/
+
+# Configuración local
+appsettings.Development.json
+appsettings.Local.json
+*.local.json
+*.Development.json
+*.Production.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dotnet-watch.log*
+*.pid
+*.seed
+*.pid.lock
+
+# Archivos del sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# IDE
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Variables de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Certificados
+*.pem
+*.cer
+*.crt
+*.key
+*.pfx
+*.p12
+
+# Docker (si se usa después)
+docker-compose.override.yml
+.dockerignore
+
+# Pruebas
+coverage/
+*.coverage
+*.coverage.xml
+*.trx
+*.testresults
+
+# Archivos temporales
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Archivos de respaldo
+*.bak
+*.backup
+*.old
+
+# Archivos de compilación
+*.dll
+*.exe
+*.pdb
+*.cache
+*.generated.cs
+
+# Archivos de usuario
+*.user
+*.userprefs
+*.suo
+*.sln.docstates
+
+# Reportes
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Paquetes locales
+*.nupkg
+*.snupkg
+
+# Migraciones temporales
+*/Migrations/*.Designer.cs
+*/Migrations/*.cs
+!*/Migrations/AppDbContextModelSnapshot.cs
