@@ -79,11 +79,10 @@ Diríjase a: src/environments/environment.ts y src/environments/environment.deve
 
 Modifique la propiedad apiUrl según corresponda:
 
-TypeScript
-export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:5000/api' // Ajustar puerto si es diferente a 5000
-}
+    export const environment = {
+      production: false,
+      apiUrl: 'http://localhost:5000/api' // Ajustar puerto si es diferente a 5000
+    }
 
 Instalar las dependencias:
 
