@@ -22,25 +22,7 @@ PASO 1: CLONAR EL REPOSITORIO
     git clone https://github.com/NicolasLinares2006/CCLInventory.git
     cd CCLInventory
 
-
-PASO 2: PREPARAR LA BASE DE DATOS
------------------------------------
-
-Iniciar el servicio de PostgreSQL segun el sistema operativo:
-
-    Linux:
-        sudo service postgresql start
-
-    Windows:
-        psql -U postgres
-
-Crear la base de datos:
-
-    CREATE DATABASE ccl_inventory;
-    \q
-
-
-PASO 3: CONFIGURAR Y EJECUTAR EL BACKEND
+PASO 2: CONFIGURAR Y EJECUTAR EL BACKEND
 ------------------------------------------
 
 Ingresar al directorio del backend:
@@ -64,7 +46,22 @@ Al iniciar, el sistema crea automaticamente las tablas y carga los datos inicial
 - Backend disponible en:      http://localhost:5000
 - Documentacion Swagger en:   http://localhost:5000/swagger
 
+PASO 3: PREPARAR LA BASE DE DATOS (OPCIONAL)
+-----------------------------------
 
+Este paso solo es necesario si desea realizar una configuración manual previa o verificar el servicio. Asegúrese de que el servicio de PostgreSQL esté activo:
+
+    Linux:
+        sudo service postgresql start
+
+    Windows:
+        psql -U postgres
+
+Si prefiere crear la base de datos manualmente antes de ejecutar el Backend, puede utilizar el siguiente comando en su consola de PostgreSQL:
+
+    CREATE DATABASE ccl_inventory;
+    \q
+    
 PASO 4: CONFIGURAR Y EJECUTAR EL FRONTEND
 -------------------------------------------
 
