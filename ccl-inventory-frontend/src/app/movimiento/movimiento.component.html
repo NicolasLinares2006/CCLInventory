@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="header">
+    <h2>Registrar Movimiento</h2>
+    <button (click)="logout()" class="btn-logout">Salir</button>
+  </div>
+
+  <div class="card">
+    <div class="form-group">
+      <label>Producto</label>
+      <select [(ngModel)]="selectedProducto" class="form-select">
+        <option [ngValue]="null">Seleccione un producto</option>
+        <option *ngFor="let producto of productos" [ngValue]="producto">
+          {{ producto.nombre }} (Disponible: {{ producto.cantidad }})
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Tipo de Operación</label>
+      <select [(ngModel)]="tipo" class="form-select">
+        <option value="">Seleccione</option>
+        <option value="entrada">Entrada (Aumentar stock)</option>
+        <option value="salida">Salida (Disminuir stock)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Cantidad a mover</label>
+      <input 
+        type="number" 
+        [(ngModel)]="cantidad" 
+        placeholder="0"
+        class="form-input"
+        [class.is-invalid]="tipo === 'salida' && cantidad > (selectedProducto?.cantidad || 0)">
+      
+      <div class="invalid-feedback" *ngIf="tipo === 'salida' && cantidad > (selectedProducto?.cantidad || 0)">
+        La cantidad excede el stock disponible
+      </div>
+    </div>
+
+    <button 
+      (click)="registrarMovimiento()" 
+      class="btn-submit"
+      [disabled]="!selectedProducto || !tipo || cantidad <= 0 || (tipo === 'salida' && cantidad > selectedProducto.cantidad)">
+      Confirmar Operación
+    </button>
+
+    <div *ngIf="mensaje" class="feedback-message" [class.feedback-error]="mensajeError" [class.feedback-success]="!mensajeError">
+      {{ mensaje }}
+    </div>
+  </div>
+
+  <button (click)="verInventario()" class="btn-secondary">
+    Consultar Inventario Total
+  </button>
+</div>

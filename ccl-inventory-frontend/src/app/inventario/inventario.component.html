@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="header">
+    <div>
+      <h2>Inventario</h2>
+      <p class="subtitle">Control de productos</p>
+    </div>
+    <button (click)="logout()" class="btn-logout">Cerrar sesión</button>
+  </div>
+
+  <div class="card">
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <td class="id-cell">#{{ producto.id }}</td>
+            <td class="producto-cell">{{ producto.nombre }}</td>
+            <td class="cantidad-cell">{{ producto.cantidad }}</td>
+            <td>
+              <span 
+                class="badge"
+                [class.badge-low]="producto.cantidad < 5"
+                [class.badge-ok]="producto.cantidad >= 5">
+                {{ producto.cantidad < 5 ? 'Bajo' : 'Disponible' }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <button (click)="volver()" class="btn-secondary">
+    Registrar Movimiento
+  </button>
+</div>
