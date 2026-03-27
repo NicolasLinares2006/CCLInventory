@@ -45,7 +45,7 @@ PASO 3: CONFIGURAR Y EJECUTAR EL BACKEND
 
 Ingresar al directorio del backend:
 
-    cd CCLInventory/CCLInventory.API
+    cd CCLInventory_back/CCLInventory.API
 
 Abrir el archivo appsettings.json y actualizar la cadena de conexion:
 
